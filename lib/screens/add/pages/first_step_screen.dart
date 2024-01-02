@@ -8,22 +8,25 @@ class FirstStepScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const Row(
-          children: [
-            Text(
-              'Product Details',
-              style: TextStyle(
-                fontSize: 16,
-                color: Color.fromARGB(255, 75, 75, 75),
-                fontWeight: FontWeight.w600,
+        const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 10),
+          child: Row(
+            children: [
+              Text(
+                'Product Details',
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Color.fromARGB(255, 75, 75, 75),
+                  fontWeight: FontWeight.w600,
+                ),
               ),
-            ),
-            Spacer(),
-            Icon(
-              Icons.keyboard_arrow_down_rounded,
-              color: Color.fromARGB(255, 75, 75, 75),
-            ),
-          ],
+              Spacer(),
+              Icon(
+                Icons.keyboard_arrow_down_rounded,
+                color: Color.fromARGB(255, 75, 75, 75),
+              ),
+            ],
+          ),
         ),
         const SizedBox(height: 30),
         Padding(

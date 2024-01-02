@@ -1,4 +1,4 @@
-import 'package:curtains_app/screens/add/pages/first_step_screen.dart';
+import 'package:curtains_app/screens/add/pages/second_step_screen.dart';
 import 'package:flutter/material.dart';
 
 class AddScreen extends StatefulWidget {
@@ -48,13 +48,11 @@ class _AddScreenState extends State<AddScreen> {
         const Step(
           isActive: true,
           title: Text(''),
-          content: FirstStepScreen(),
+          content: SecondStep(),
         ),
         const Step(
           title: Text(''),
-          content: Center(
-            child: Text('Address'),
-          ),
+          content: SecondStep(),
         ),
         const Step(
             title: Text(''),
