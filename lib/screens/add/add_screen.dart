@@ -12,24 +12,63 @@ class _AddScreenState extends State<AddScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stepper(
-        steps: stepList(),
-        type: StepperType.horizontal,
-      ),
+      body: SafeArea(
+          child: Column(children: [
+        Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Row(
+            children: [
+              IconButton(
+                onPressed: () {},
+                icon: const Icon(Icons.arrow_back_ios_new_rounded),
+              ),
+              const Text(
+                'Add Curtains',
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+            ],
+          ),
+        ),
+        Expanded(
+          child: Stepper(
+            elevation: 0,
+            connectorThickness: 2,
+            steps: stepList(),
+            type: StepperType.horizontal,
+          ),
+        ),
+      ])),
     );
   }
 
   List<Step> stepList() => [
-        const Step(title: Text('First Step'), content: FirstStepScreen()),
         const Step(
-            title: Text('Two Step'),
-            content: Center(
-              child: Text('Address'),
-            )),
+          isActive: true,
+          title: Text(''),
+          content: FirstStepScreen(),
+        ),
         const Step(
-            title: Text('Confirm'),
+          title: Text(''),
+          content: Center(
+            child: Text('Address'),
+          ),
+        ),
+        const Step(
+            title: Text(''),
             content: Center(
               child: Text('Confirm'),
             ))
       ];
 }
+
+
+
+// Stepper(
+//             elevation: 0,
+//             connectorThickness: 2,
+//             steps: stepList(),
+//             type: StepperType.horizontal,
+//           ),
