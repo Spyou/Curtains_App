@@ -6,7 +6,12 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return  Scaffold(
+      floatingActionButton: FloatingActionButton(
+        child: const Center(child: Icon(Icons.add),)  ,
+          onPressed: (){
+
+      }),
         body: NestedScrollView(
       headerSliverBuilder: (context, innerBoxIsScrolled) {
         return [
