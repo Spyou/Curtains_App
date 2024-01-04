@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "645739445640",
+    "project_id": "curtains-app",
+    "storage_bucket": "curtains-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:645739445640:android:1b77130cbf342365ccce3d",
+        "android_client_info": {
+          "package_name": "com.spyou.curtains_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzrX4GkHszUoKvyLttwIDH7Y365kywYa0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
