@@ -1,10 +1,27 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:curtains_app/blocs/home_bloc/home_bloc.dart';
 import 'package:curtains_app/screens/add/add_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:icons_plus/icons_plus.dart';
+import 'dart:convert';
+import 'package:http/http.dart' as http;
 
-class HomePage extends StatelessWidget {
+
+import '../../blocs/add_bloc/add_bloc.dart';
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  late HomeBloc homeBloc;
+
+  @override
+  void initState() {
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -194,7 +211,7 @@ class HomePage extends StatelessWidget {
                 ),
                 Padding(
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 25, vertical: 20),
+                  const EdgeInsets.symmetric(horizontal: 25, vertical: 20),
                   child: Container(
                     height: 210,
                     width: double.infinity,
