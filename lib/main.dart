@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider<HomeBloc>(
-          create: (context) => HomeBloc(),
+          create: (context) => HomeBloc(myDb: MyDb()),
         ),
         BlocProvider<AddBloc>(
           create: (context) => AddBloc(myDb: MyDb()),

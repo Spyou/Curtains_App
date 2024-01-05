@@ -24,7 +24,8 @@ class MyDb {
     var snapShot = await _fireStore.collection('products').add(
       {
         'curtainHeight': product.curtainHeight,
-        'curtainWidth': product.curtainPriceForSelling,
+        'curtainWidth': product.curtainWidth,
+        'curtainPriceForSelling': product.curtainPriceForSelling,
         'curtainRealPrice': product.curtainRealPrice,
         'curtainSellPrice': product.curtainSellPrice,
         'benefit': product.benefit,

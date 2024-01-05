@@ -87,7 +87,7 @@ class _AddScreenState extends State<AddScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: BlocConsumer<AddBloc, AddState>(
+        body: BlocConsumer<AddBloc, AddState>(
         listener: (context, state) {},
         builder: (context, state) {
           return SafeArea(
@@ -152,11 +152,11 @@ class _AddScreenState extends State<AddScreen> {
                   return Center(child: CircularProgressIndicator(),);
                 }
                 else if (state is AddSuccessState){
-                  setState(() {
-                    currentStep < 2 ? currentStep += 1 : null;
 
-                  });
-                  return Container(child: Center(child: Text("Maxsulot Qo`shildi"),));
+                  return Container(child: Center(child: Text("Maxsulot Qo`shildi",style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 19,
+                  ),),));
                 }
                 else   if(state is ErrorLoad){
                   return Center(child:Text(state.error,style: TextStyle(fontSize: 20,color: Colors.black),),);
@@ -1102,6 +1102,8 @@ class _AddScreenState extends State<AddScreen> {
     double width = double.parse(widthTextController.text);
     double calculate = price * height * width;
     calculatedPrice = "${calculate.toString()}\$";
+    sellPriceTextController.text=calculate.toDouble().toString();
+
     print("after $calculatedPrice");
     setState(() {});
 
